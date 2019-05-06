@@ -8,7 +8,7 @@ The Arithmetic Logic Unit (ALU) is a simple digital dispositive that's able to r
 
 ## Important 
 This code is a College work that have some requirements:
-1. The ALU needs to have at least 8 operations that sum and subtraction are necessary.
-2. The input needs to be inserted by the FPGA keys.
-3. May contains 4 Flags: Zero, Overflow, Signal, Carry.
+- The ALU needs to have at least 8 operations that sum and subtraction are necessary.
+- The input needs to be inserted by the FPGA keys.
+- May contains 4 Flags: Zero, Overflow, Signal, Carry.
 
