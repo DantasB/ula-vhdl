@@ -45,4 +45,11 @@ COMPONENT somapain4
            cout : out  STD_LOGIC;
            saida : out  STD_LOGIC_VECTOR (3 downto 0));
 END COMPONENT somapain4;
+    
+COMPONENT Complementa is
+    Port ( x : in  STD_LOGIC_VECTOR (3 downto 0);
+           saida : out  STD_LOGIC_VECTOR (3 downto 0));
+end COMPONENT Complementa;
+    
+    
 
