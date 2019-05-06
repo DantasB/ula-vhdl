@@ -43,7 +43,11 @@ COMPONENT somapain4
            y : in  STD_LOGIC_VECTOR (3 downto 0);
            cin : in  STD_LOGIC;
            cout : out  STD_LOGIC;
-           saida : out  STD_LOGIC_VECTOR (3 downto 0));
+           saida : out  STD_LOGIC_VECTOR (3 downto 0);
+           Flag_Zero : out STD_LOGIC;
+           Flag_Sinal : out STD_LOGIC;
+           Flag_Overflow : out STD_LOGIC);
+    
 END COMPONENT somapain4;
 
 SIGNAL inverso: STD_LOGIC_VECTOR(3 downto 0);
