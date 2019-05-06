@@ -70,3 +70,10 @@ COMPONENT Modulo_Xor is
            y : in  STD_LOGIC_VECTOR (3 downto 0);
            saida : out  STD_LOGIC_VECTOR (3 downto 0));
 end COMPONENT Modulo_Xor;    
+
+COMPONENT Modulo_Or is
+    Port ( x : in  STD_LOGIC_VECTOR (3 downto 0);
+           y : in  STD_LOGIC_VECTOR (3 downto 0);
+           saida : out  STD_LOGIC_VECTOR (3 downto 0));
+end COMPONENT Modulo_Or;
+	
