@@ -70,13 +70,16 @@ END COMPONENT Complementa;
 
 signal ynvertido: STD_LOGIC_VECTOR (3 downto 0);
 signal resultado: std_logic_vector (3 downto 0);
+signal Flag_Zero_somador: std_logic;
+signal Flag_Sinal_somador: std_logic;
+signal Flag_Overflow_somador: std_logic;
 begin
 
 a0:Complementa port map(y, ynvertido);
-a1:somapain4 port map (bin, x, ynvertido, bout, resultado);
+a1:somapain4 port map (bin, x, ynvertido, bout, resultado, Flag_Zero_somador, Flag_Sinal_somador, Flag_Overflow_somador);
 saida <= resultado;
 Flag_Zero <= not(resultado(0) or resultado(1) or resultado(2) or resultado(3));
---Flag_Overflow <=
+Flag_Overflow <= Flag_Overflow_somador;
 Flag_Borrow <= not bout;
 Flag_Sinal <= resultado(3);
 end Behavioral;
