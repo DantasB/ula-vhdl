@@ -44,7 +44,7 @@ COMPONENT somapain4
            cin : in  STD_LOGIC;
            cout : out  STD_LOGIC;
            saida : out  STD_LOGIC_VECTOR (3 downto 0));
-END COMPONENT somapain4;
+end COMPONENT somapain4;
     
 COMPONENT Complementa is
     Port ( x : in  STD_LOGIC_VECTOR (3 downto 0);
@@ -77,3 +77,8 @@ COMPONENT Modulo_Or is
            saida : out  STD_LOGIC_VECTOR (3 downto 0));
 end COMPONENT Modulo_Or;
 	
+COMPONENT Modulo_And is
+    Port ( x : in  STD_LOGIC_VECTOR (3 downto 0);
+           y : in  STD_LOGIC_VECTOR (3 downto 0);
+           saida : out  STD_LOGIC_VECTOR (3 downto 0));
+end COMPONENT Modulo_And;
