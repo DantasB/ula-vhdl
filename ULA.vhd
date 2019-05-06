@@ -87,3 +87,5 @@ COMPONENT incrementa1 is
     Port ( x : in  STD_LOGIC_VECTOR (3 downto 0);
            saida : out  STD_LOGIC_VECTOR (3 downto 0));
 end COMPONENT incrementa1;
+
+signal Not_A, Compl_A, A_mais_B, A_mais_1, A_minus_B, A_and_B, A_xor_B, A_or_B : STD_LOGIC_VECTOR (3 downto 0);
