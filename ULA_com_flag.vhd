@@ -79,7 +79,7 @@ COMPONENT subtratain4 is
 	   Flag_Zero : out STD_LOGIC;
 	   Flag_Sinal : out STD_LOGIC;
 	   Flag_Overflow : out STD_LOGIC;
-	   Flag_Bout : out STD_LOGIC);
+	   Flag_Borrow : out STD_LOGIC);
 end COMPONENT subtratain4;
 
 COMPONENT Modulo_Xor is
@@ -115,20 +115,20 @@ end COMPONENT incrementa1;
 
 signal Not_A, Compl_A, A_mais_B, A_mais_1, A_menos_B, A_and_B, A_xor_B, A_or_B : STD_LOGIC_VECTOR (3 downto 0);
 signal Flag_Zero_somador, Flag_Sinal_somador, Flag_Overflow_somador, Flag_Zero_complementador, Flag_Sinal_complementador;
-signal Flag_Zero_inversor, Flag_Sinal_inversor, Flag_Zero_subtrador, Flag_Sinal_subtrator, Flag_Overflow_subtrator, Flag_Bout_subtrador;
+signal Flag_Zero_inversor, Flag_Sinal_inversor, Flag_Zero_subtrador, Flag_Sinal_subtrator, Flag_Overflow_subtrator, Flag_Borrow_subtrador;
 signal Flag_Zero_xor, Flag_Sinal_xor, Flag_Zero_or, Flag_Sinal_or, Flag_Zero_and, Flag_Sinal_and, Flag_Zero_incrementa, Flag_Sinal_incrementa;
 
 begin
 
 	-- Declarando os componentes
-	U0: Inversor port map (A, Not_A); -- Para operação 0
-	U1: Complementa port map (A, Compl_A); -- Para operação 1
-	U2: somapain4 port map (A, B, '0', A_mais_B); -- Para operaçã9o 2
-	U3: incrementa1 port map (A, A_mais_1); -- Para operação 3
-	U4: subtratain4 port map (A, B, '0', A_menos_B); -- Para operação 4
-	U5: Modulo_And port map (A, B, A_and_B); -- Para operação 5
-	U6: Modulo_Xor port map (A, B, A_xor_B); -- Para operação 6
-	U7: Modulo_Or port map (A, B, A_or_B); -- Para operação 7
+	U0: Inversor port map (A, Not_A, Flag_Zero_inversor, Flag_Sinal_inversor); -- Para operação 0
+	U1: Complementa port map (A, Compl_A, Flag_Zero_complementador, Flag_Sinal_complementador); -- Para operação 1
+	U2: somapain4 port map (A, B, '0', A_mais_B, Flag_Zero_somador, Flag_Sinal_somador, Flag_Overflow_somador); -- Para operaçã9o 2
+	U3: incrementa1 port map (A, A_mais_1, Flag_Zero_incrementa, Flag_Sinal_incrementa); -- Para operação 3
+	U4: subtratain4 port map (A, B, '0', A_menos_B, Flag_Zero_subtrator, Flag_Sinal_subtrator, Flag_Overflow_subtrator, Flag_Borrow_subtrator); -- Para operação 4
+	U5: Modulo_And port map (A, B, A_and_B, Flag_Zero_and, Flag_Sinal_and); -- Para operação 5
+	U6: Modulo_Xor port map (A, B, A_xor_B, Flag_Zero_xor, Flag_Sinal_xor); -- Para operação 6
+	U7: Modulo_Or port map (A, B, A_or_B, Flag_Zero_or, Flag_Sinal_or); -- Para operação 7
 	
 	process (Operacao, Not_A, Compl_A, A_mais_B, A_mais_1, A_menos_B, A_and_B, A_xor_B, A_or_B)
 	begin
