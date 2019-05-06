@@ -56,4 +56,13 @@ COMPONENT Inversor is
            saida : out  STD_LOGIC_VECTOR (3 downto 0));
 end COMPONENT Inversor;
     
+COMPONENT subtratain4 is
+    Port ( x : in  STD_LOGIC_VECTOR (3 downto 0);
+           y : in  STD_LOGIC_VECTOR (3 downto 0);
+           bin : in  STD_LOGIC;
+           bout : out  STD_LOGIC;
+			  saida : out  STD_LOGIC_VECTOR (3 downto 0)
+			  );
+end COMPONENT subtratain4;
 
+    
