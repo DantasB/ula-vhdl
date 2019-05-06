@@ -51,5 +51,9 @@ COMPONENT Complementa is
            saida : out  STD_LOGIC_VECTOR (3 downto 0));
 end COMPONENT Complementa;
     
+COMPONENT Inversor is
+    Port ( x : in  STD_LOGIC_VECTOR (3 downto 0);
+           saida : out  STD_LOGIC_VECTOR (3 downto 0));
+end COMPONENT Inversor;
     
 
