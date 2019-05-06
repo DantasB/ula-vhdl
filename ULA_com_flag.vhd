@@ -114,6 +114,9 @@ COMPONENT incrementa1 is
 end COMPONENT incrementa1;
 
 signal Not_A, Compl_A, A_mais_B, A_mais_1, A_menos_B, A_and_B, A_xor_B, A_or_B : STD_LOGIC_VECTOR (3 downto 0);
+signal Flag_Zero_somador, Flag_Sinal_somador, Flag_Overflow_somador, Flag_Zero_complementador, Flag_Sinal_complementador;
+signal Flag_Zero_inversor, Flag_Sinal_inversor, Flag_Zero_subtrador, Flag_Sinal_subtrator, Flag_Overflow_subtrator, Flag_Bout_subtrador;
+signal Flag_Zero_xor, Flag_Sinal_xor, Flag_Zero_or, Flag_Sinal_or, Flag_Zero_and, Flag_Sinal_and, Flag_Zero_incrementa, Flag_Sinal_incrementa;
 
 begin
 
