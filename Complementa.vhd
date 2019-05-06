@@ -31,7 +31,9 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity Complementa is
     Port ( x : in  STD_LOGIC_VECTOR (3 downto 0);
-           saida : out  STD_LOGIC_VECTOR (3 downto 0));
+           saida : out  STD_LOGIC_VECTOR (3 downto 0);
+           Flag_Zero : out STD_LOGIC;
+           Flag_Sinal : out STD_LOGIC);
 end Complementa;
 
 architecture Behavioral of Complementa is
@@ -60,6 +62,8 @@ um(2) <= '0';
 um(3) <= '0';
 label2: somapain4 port map (inverso, um, '0', cout, complementado);
 saida <= complementado;
+Flag_Zero <= not(complementado(0) or complementado(1) or complementado(2) or complementado(3));
+Flag_Sinal <= complementado(3);
 
 
 end Behavioral;
