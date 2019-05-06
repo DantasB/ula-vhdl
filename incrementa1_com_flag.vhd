@@ -58,15 +58,14 @@ SIGNAL Flag_Sinal_somador : std_logic;
 SIGNAL Flag_Overflow_somador : std_logic;
 begin
 
-
-    um(0) <= '1';
-    um(1) <= '0';
-    um(2) <= '0';
-    um(3) <= '0';
-    label2: somapain4 port map (x, um, '0', cout, complementado);
-    saida <= complementado;
-    Flag_Zero <= not (complementado(0) or complementado(1) or complementado(2) or complementado(3));
-    Flag_Sinal <= complementado(3);
+um(0) <= '1';
+um(1) <= '0';
+um(2) <= '0';
+um(3) <= '0';
+label2: somapain4 port map (x, um, '0', cout, complementado);
+saida <= complementado;
+Flag_Zero <= not (complementado(0) or complementado(1) or complementado(2) or complementado(3));
+Flag_Sinal <= complementado(3);
 
 
 
