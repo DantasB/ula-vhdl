@@ -43,6 +43,6 @@ begin
 	Gen_1: For I IN 3 downto 0 generate
 			 saida(I) <= x(I) and y(I);
 	end generate;
-	Flag_Zero <= not(saida(0) or saida(1) or saida(2) or saida(3);
+	Flag_Zero <= not(saida(0) or saida(1) or saida(2) or saida(3));
 	Flag_Sinal <= saida(3);
 end Behavioral;
