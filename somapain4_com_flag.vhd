@@ -54,15 +54,18 @@ COMPONENT somapain
 end COMPONENT somapain;
 
 signal prop: std_logic_vector(2 downto 0);
-
+signal valor : std_logic_vector(3 downto 0);
+signal c3 : std_logic;
+signal c2 : std_logic;
 begin
 
-a0: somapain port map (cin, x(0), y(0), prop(0), saida(0));
-a1: somapain port map (prop(0), x(1), y(1), prop(1), saida(1));
-a2: somapain port map (prop(1), x(2), y(2), prop(2), saida(2));
-a3: somapain port map (prop(2), x(3), y(3), cout, saida(3));
-Flag_Zero <= not(a0 or a1 or a2 or a3);
-Flag_Sinal <= a3;
-Flag_Overflow <= cout xor prop(2);
-
+a0: somapain port map (cin, x(0), y(0), prop(0), valor(0));
+a1: somapain port map (prop(0), x(1), y(1), prop(1), valor(1));
+a2: somapain port map (prop(1), x(2), y(2), c2, valor(2));
+a3: somapain port map (c2, x(3), y(3), c3, valor(3));
+Flag_Zero <= not(valor(0) or valor(1) or valor(2) or valor(3));
+Flag_Sinal <= valor(3);
+Flag_Overflow <= c3 xor c2;
+saida <= valor;
 end Behavioral;
+
