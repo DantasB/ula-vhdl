@@ -43,5 +43,5 @@ COMPONENT somapain4
            cout : out  STD_LOGIC;
            saida : out  STD_LOGIC_VECTOR (3 downto 0));
     
-END COMPONENT;
+end COMPONENT;
 
