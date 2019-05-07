@@ -68,11 +68,11 @@ COMPONENT Complementa
 		  
 END COMPONENT Complementa;
 
-signal ynvertido: STD_LOGIC_VECTOR (3 downto 0);
-signal resultado: std_logic_vector (3 downto 0);
-signal Flag_Zero_somador: std_logic;
-signal Flag_Sinal_somador: std_logic;
-signal Flag_Overflow_somador: std_logic;
+SIGNAL ynvertido: STD_LOGIC_VECTOR (3 downto 0);
+SIGNAL resultado: std_logic_vector (3 downto 0);
+SIGNAL Flag_Zero_somador: std_logic;
+SIGNAL Flag_Sinal_somador: std_logic;
+SIGNAL Flag_Overflow_somador: std_logic;
 
 begin
 
