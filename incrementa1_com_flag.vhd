@@ -47,7 +47,7 @@ COMPONENT somapain4
            Flag_Zero : out STD_LOGIC;
            Flag_Sinal : out STD_LOGIC;
            Flag_Overflow : out STD_LOGIC);
-END COMPONENT somapain4;
+end COMPONENT somapain4;
 
 SIGNAL resultado: STD_LOGIC_VECTOR(3 downto 0);
 SIGNAL um: STD_LOGIC_VECTOR(3 downto 0);
@@ -56,6 +56,7 @@ SIGNAL cout: std_logic;
 SIGNAL Flag_Zero_somador : std_logic;
 SIGNAL Flag_Sinal_somador : std_logic;
 SIGNAL Flag_Overflow_somador : std_logic;
+
 begin
 
 um(0) <= '1';
@@ -66,8 +67,6 @@ label2: somapain4 port map (x, um, '0', cout, complementado);
 saida <= complementado;
 Flag_Zero <= not (complementado(0) or complementado(1) or complementado(2) or complementado(3));
 Flag_Sinal <= complementado(3);
-
-
 
 
 end Behavioral;
