@@ -48,7 +48,7 @@ COMPONENT somapain4
            Flag_Sinal : out STD_LOGIC;
            Flag_Overflow : out STD_LOGIC);
     
-END COMPONENT somapain4;
+end COMPONENT somapain4;
 
 SIGNAL inverso: STD_LOGIC_VECTOR(3 downto 0);
 SIGNAL resultado: STD_LOGIC_VECTOR(3 downto 0);
@@ -58,8 +58,8 @@ SIGNAL cout: std_logic;
 SIGNAL Flag_Zero_somador: std_logic;
 SIGNAL Flag_Sinal_somador: std_logic;
 SIGNAL Flag_Overflow_somador: std_logic;
-begin
 
+begin
 
 inverso <= NOT(X);
 
