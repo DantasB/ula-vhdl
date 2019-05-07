@@ -39,10 +39,12 @@ end Modulo_And;
 
 architecture Behavioral of Modulo_And is
 
+signal valor : std_logic_vector (3 downto 0);
+
 begin
 	Gen_1: For I IN 3 downto 0 generate
-			 saida(I) <= x(I) and y(I);
+			 valor(I) <= x(I) and y(I);
 	end generate;
-	Flag_Zero <= not(saida(0) or saida(1) or saida(2) or saida(3));
-	Flag_Sinal <= saida(3);
+	Flag_Zero <= not(valor(0) or valor(1) or valor(2) or valor(3));
+	Flag_Sinal <= valor(3);
 end Behavioral;
