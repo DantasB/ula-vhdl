@@ -49,7 +49,7 @@ COMPONENT somapain4
          saida : out  STD_LOGIC_VECTOR (3 downto 0)
         );
 		  
-END COMPONENT somapain4;
+end COMPONENT somapain4;
 
 COMPONENT Complementa
     PORT(
@@ -57,10 +57,11 @@ COMPONENT Complementa
 		  saida : out  STD_LOGIC_VECTOR (3 downto 0)
         );
 		  
-END COMPONENT Complementa;
+end COMPONENT Complementa;
 
 signal ynvertido: STD_LOGIC_VECTOR (3 downto 0);
 signal resultado: std_logic_vector (3 downto 0);
+
 begin
 
 a0:Complementa port map(y, ynvertido);
