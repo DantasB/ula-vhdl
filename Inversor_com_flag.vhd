@@ -33,15 +33,17 @@ entity Inversor is
     Port ( x : in  STD_LOGIC_VECTOR (3 downto 0);
            saida : out  STD_LOGIC_VECTOR (3 downto 0);
 	   Flag_Zero : out STD_LOGIC;
-	   Flag_Negativo : out STD_LOGIC);
+	   Flag_Sinal : out STD_LOGIC);
 end Inversor;
 
 architecture Behavioral of Inversor is
-
+SIGNAL valor : STD_LOGIC_VECTOR(3 downto 0);
 begin
 	Gen_1: For I IN 3 downto 0 generate
-			 saida(I) <= not x(I);
+			 valor(I) <= not x(I);
 	end generate;
-	Flag_Zero <= not (saida(0) or saida(1) or saida(2) or saida(3));
-	Flag_Negativo <= saida(3);
+	Flag_Zero <= not (valor(0) or valor(1) or valor(2) or valor(3));
+	Flag_Sinal <= valor(3);
+	saida <= valor;
 end Behavioral;
+
