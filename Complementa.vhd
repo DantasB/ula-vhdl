@@ -44,22 +44,3 @@ COMPONENT somapain4
            saida : out  STD_LOGIC_VECTOR (3 downto 0));
 END COMPONENT;
 
-SIGNAL inverso: STD_LOGIC_VECTOR(3 downto 0);
-SIGNAL resultado: STD_LOGIC_VECTOR(3 downto 0);
-SIGNAL um: STD_LOGIC_VECTOR(3 downto 0);
-SIGNAL complementado: STD_LOGIC_VECTOR(3 downto 0);
-SIGNAL cout: std_logic;
-begin
-
-
-inverso <= NOT(X);
-
-um(0) <= '1';
-um(1) <= '0';
-um(2) <= '0';
-um(3) <= '0';
-label2: somapain4 port map (inverso, um, '0', cout, complementado);
-saida <= complementado;
-
-
-end Behavioral;
