@@ -56,7 +56,7 @@ COMPONENT somapain4
 	 Flag_Sinal : out STD_LOGIC
         );
 		  
-END COMPONENT somapain4;
+end COMPONENT somapain4;
 
 COMPONENT Complementa
     PORT(
@@ -66,7 +66,7 @@ COMPONENT Complementa
 	Flag_Sinal : out STD_LOGIC
         );
 		  
-END COMPONENT Complementa;
+end COMPONENT Complementa;
 
 SIGNAL ynvertido: STD_LOGIC_VECTOR (3 downto 0);
 SIGNAL resultado: std_logic_vector (3 downto 0);
@@ -83,4 +83,5 @@ begin
 	Flag_Overflow <= Flag_Overflow_somador;
 	Flag_Borrow <= not bout;
 	Flag_Sinal <= resultado(3);
+
 end Behavioral;
