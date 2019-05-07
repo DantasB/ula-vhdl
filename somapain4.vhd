@@ -48,7 +48,7 @@ COMPONENT somapain
          cout : OUT  std_logic;
          saida : OUT  std_logic
         );
-END COMPONENT somapain;
+end COMPONENT somapain;
 
 signal prop: std_logic_vector(2 downto 0);
 
