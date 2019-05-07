@@ -75,11 +75,11 @@ COMPONENT subtratain4 is
            y : in  STD_LOGIC_VECTOR (3 downto 0);
            bin : in  STD_LOGIC;
            bout : out  STD_LOGIC;
-	   saida : out  STD_LOGIC_VECTOR (3 downto 0)
-	   Flag_Zero : out STD_LOGIC;
-	   Flag_Sinal : out STD_LOGIC;
-	   Flag_Overflow : out STD_LOGIC;
-	   Flag_Borrow : out STD_LOGIC);
+			  saida : out  STD_LOGIC_VECTOR (3 downto 0);
+			  Flag_Zero : out STD_LOGIC;
+			  Flag_Sinal : out STD_LOGIC;
+			  Flag_Overflow : out STD_LOGIC;
+			  Flag_Borrow : out STD_LOGIC);
 end COMPONENT subtratain4;
 
 COMPONENT Modulo_Xor is
@@ -116,7 +116,7 @@ end COMPONENT incrementa1;
 signal Not_A, Compl_A, A_mais_B, A_mais_1, A_menos_B, A_and_B, A_xor_B, A_or_B : STD_LOGIC_VECTOR (3 downto 0);
 signal cout_somador, bout_subtrator : STD_LOGIC;
 signal Flag_Zero_somador, Flag_Sinal_somador, Flag_Overflow_somador, Flag_Zero_complementador, Flag_Sinal_complementador : STD_LOGIC;
-signal Flag_Zero_inversor, Flag_Sinal_inversor, Flag_Zero_subtrador, Flag_Sinal_subtrator, Flag_Overflow_subtrator, Flag_Borrow_subtrador : STD_LOGIC;
+signal Flag_Zero_inversor, Flag_Sinal_inversor, Flag_Zero_subtrator, Flag_Sinal_subtrator, Flag_Overflow_subtrator, Flag_Borrow_subtrator : STD_LOGIC;
 signal Flag_Zero_xor, Flag_Sinal_xor, Flag_Zero_or, Flag_Sinal_or, Flag_Zero_and, Flag_Sinal_and, Flag_Zero_incrementa, Flag_Sinal_incrementa : STD_LOGIC;
 
 begin
@@ -138,38 +138,38 @@ begin
 				Z <= A_and_B;
 				Flag_Zero <= Flag_Zero_and;
 	   			Flag_Sinal <= Flag_Sinal_and;
-	   			Flag_Overflow <= "0000";
-	   			Flag_Cout <= "0000";
+	   			Flag_Overflow <= '0';
+	   			Flag_Cout <= '0';
 			when "1000" =>
 				Z <= A_and_B;
 				Flag_Zero <= Flag_Zero_and;
 	   			Flag_Sinal <= Flag_Sinal_and;
-	   			Flag_Overflow <= "0000";
-	   			Flag_Cout <= "0000";
+	   			Flag_Overflow <= '0';
+	   			Flag_Cout <= '0';
 			when "0001" =>
 				Z <= A_xor_B;
 				Flag_Zero <= Flag_Zero_xor;
 	   			Flag_Sinal <= Flag_Sinal_xor;
-	   			Flag_Overflow <= "0000";
-	   			Flag_Cout <= "0000";
+	   			Flag_Overflow <= '0';
+	   			Flag_Cout <= '0';
 			when "1001" =>
 				Z <= A_xor_B;
 				Flag_Zero <= Flag_Zero_xor;
 	   			Flag_Sinal <= Flag_Sinal_xor;
-	   			Flag_Overflow <= "0000";
-	   			Flag_Cout <= "0000";
+	   			Flag_Overflow <= '0';
+	   			Flag_Cout <= '0';
 			when "0010" =>
 				Z <= A_mais_1;
 				Flag_Zero <= Flag_Zero_incrementa;
 	   			Flag_Sinal <= Flag_Sinal_incrementa;
-	   			Flag_Overflow <= "0000";
-	   			Flag_Cout <= "0000";
+	   			Flag_Overflow <= '0';
+	   			Flag_Cout <= '0';
 			when "1010" =>
 				Z <= A_mais_1;
 				Flag_Zero <= Flag_Zero_incrementa;
 	   			Flag_Sinal <= Flag_Sinal_incrementa;
-	   			Flag_Overflow <= "0000";
-	   			Flag_Cout <= "0000";
+	   			Flag_Overflow <= '0';
+	   			Flag_Cout <= '0';
 			when "0011" =>
 				Z <= A_menos_B;
 				Flag_Zero <= Flag_Zero_subtrator;
@@ -186,14 +186,14 @@ begin
 				Z <= A_or_B;
 				Flag_Zero <= Flag_Zero_or;
 	   			Flag_Sinal <= Flag_Sinal_or;
-	   			Flag_Overflow <= "0000";
-	   			Flag_Cout <= "0000";
+	   			Flag_Overflow <= '0';
+	   			Flag_Cout <= '0';
 			when "1100" =>
 				Z <= A_or_B;
 				Flag_Zero <= Flag_Zero_or;
 	   			Flag_Sinal <= Flag_Sinal_or;
-	   			Flag_Overflow <= "0000";
-	   			Flag_Cout <= "0000";
+	   			Flag_Overflow <= '0';
+	   			Flag_Cout <= '0';
 			when "0101" =>
 				Z <= A_mais_B;
 				Flag_Zero <= Flag_Zero_subtrator;
@@ -210,27 +210,35 @@ begin
 				Z <= Compl_A;
 				Flag_Zero <= Flag_Zero_or;
 	   			Flag_Sinal <= Flag_Sinal_or;
-	   			Flag_Overflow <= "0000";
-	   			Flag_Cout <= "0000";
+	   			Flag_Overflow <= '0';
+	   			Flag_Cout <= '0';
 			when "1110" =>
 				Z <= Compl_A;
 				Flag_Zero <= Flag_Zero_complementador;
 	   			Flag_Sinal <= Flag_Sinal_complementador;
-	   			Flag_Overflow <= "0000";
-	   			Flag_Cout <= "0000";
+	   			Flag_Overflow <= '0';
+	   			Flag_Cout <= '0';
 			when "0111" =>
 				Z <= Not_A;
 				Flag_Zero <= Flag_Zero_inversor;
 	   			Flag_Sinal <= Flag_Sinal_inversor;
-	   			Flag_Overflow <= "0000";
-	   			Flag_Cout <= "0000";
+	   			Flag_Overflow <= '0';
+	   			Flag_Cout <= '0';
 			when "1111" =>
 				Z <= Not_A;
 				Flag_Zero <= Flag_Zero_inversor;
 	   			Flag_Sinal <= Flag_Sinal_inversor;
-	   			Flag_Overflow <= "0000";
-	   			Flag_Cout <= "0000";
+	   			Flag_Overflow <= '0';
+	   			Flag_Cout <= '0';
+			when others =>
+				z <= Not_A;
+				Flag_Zero <= Flag_Zero_inversor;
+	   			Flag_Sinal <= Flag_Sinal_inversor;
+	   			Flag_Overflow <= '0';
+	   			Flag_Cout <= '0';
+			
 		end case;
 	end process;
 
 end Behavioral;
+
