@@ -51,7 +51,8 @@ COMPONENT somapain4
            saida : out  STD_LOGIC_VECTOR (3 downto 0);
 	   Flag_Zero : out STD_LOGIC;
 	   Flag_Sinal : out STD_LOGIC;
-	   Flag_Overflow : out STD_LOGIC
+	   Flag_Overflow : out STD_LOGIC;
+		Flag_Cout : out STD_LOGIC
 	   );
 end COMPONENT somapain4;
     
@@ -115,7 +116,7 @@ end COMPONENT incrementa1;
 
 signal Not_A, Compl_A, A_mais_B, A_mais_1, A_menos_B, A_and_B, A_xor_B, A_or_B : STD_LOGIC_VECTOR (3 downto 0);
 signal cout_somador, bout_subtrator : STD_LOGIC;
-signal Flag_Zero_somador, Flag_Sinal_somador, Flag_Overflow_somador, Flag_Zero_complementador, Flag_Sinal_complementador : STD_LOGIC;
+signal Flag_Zero_somador, Flag_Sinal_somador, Flag_Overflow_somador, Flag_Cout_somador, Flag_Zero_complementador, Flag_Sinal_complementador : STD_LOGIC;
 signal Flag_Zero_inversor, Flag_Sinal_inversor, Flag_Zero_subtrator, Flag_Sinal_subtrator, Flag_Overflow_subtrator, Flag_Borrow_subtrator : STD_LOGIC;
 signal Flag_Zero_xor, Flag_Sinal_xor, Flag_Zero_or, Flag_Sinal_or, Flag_Zero_and, Flag_Sinal_and, Flag_Zero_incrementa, Flag_Sinal_incrementa : STD_LOGIC;
 
@@ -124,7 +125,7 @@ begin
 	-- Declarando os componentes
 	U0: Inversor port map (A, Not_A, Flag_Zero_inversor, Flag_Sinal_inversor); -- Para operação 0
 	U1: Complementa port map (A, Compl_A, Flag_Zero_complementador, Flag_Sinal_complementador); -- Para operação 1
-	U2: somapain4 port map (A, B, '0', cout_somador, A_mais_B, Flag_Zero_somador, Flag_Sinal_somador, Flag_Overflow_somador); -- Para operaçã9o 2
+	U2: somapain4 port map (A, B, '0', cout_somador, A_mais_B, Flag_Zero_somador, Flag_Sinal_somador, Flag_Overflow_somador, Flag_Cout_somador); -- Para operação 2
 	U3: incrementa1 port map (A, A_mais_1, Flag_Zero_incrementa, Flag_Sinal_incrementa); -- Para operação 3
 	U4: subtratain4 port map (A, B, '0', bout_subtrator, A_menos_B, Flag_Zero_subtrator, Flag_Sinal_subtrator, Flag_Overflow_subtrator, Flag_Borrow_subtrator); -- Para operação 4
 	U5: Modulo_And port map (A, B, A_and_B, Flag_Zero_and, Flag_Sinal_and); -- Para operação 5
@@ -196,16 +197,16 @@ begin
 	   			Flag_Cout <= '0';
 			when "0101" =>
 				Z <= A_mais_B;
-				Flag_Zero <= Flag_Zero_subtrator;
-	   			Flag_Sinal <= Flag_Sinal_subtrator;
-	   			Flag_Overflow <= Flag_Overflow_subtrator;
-	   			Flag_Cout <= Flag_Borrow_subtrator;
+				Flag_Zero <= Flag_Zero_somador;
+	   			Flag_Sinal <= Flag_Sinal_somador;
+	   			Flag_Overflow <= Flag_Overflow_somador;
+	   			Flag_Cout <= Flag_Cout_somador;
 			when "1101" =>
 				Z <= A_mais_B;
 				Flag_Zero <= Flag_Zero_somador;
 	   			Flag_Sinal <= Flag_Sinal_somador;
 	   			Flag_Overflow <= Flag_Overflow_somador;
-	   			Flag_Cout <= cout_somador;
+	   			Flag_Cout <= Flag_Cout_somador;
 			when "0110" =>
 				Z <= Compl_A;
 				Flag_Zero <= Flag_Zero_or;

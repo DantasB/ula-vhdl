@@ -1,0 +1,43 @@
+Running: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/fuse -intstyle ise -incremental -o /home/sd/bdantas/danteste_isim_beh.exe -prj /home/sd/bdantas/danteste_beh.prj work.danteste 
+ISim P.20131013 (signature 0xfbc00daa)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+Parsing VHDL file "/home/sd/bdantas/../Downloads/compartilhavm/compartilhavm/somapain.vhd" into library work
+Parsing VHDL file "/home/sd/bdantas/../Downloads/compartilhavm/compartilhavm/somapain4_com_flag.vhd" into library work
+Parsing VHDL file "/home/sd/bdantas/../Downloads/compartilhavm/compartilhavm/Complementa_com_flag.vhd" into library work
+Parsing VHDL file "/home/sd/bdantas/../Downloads/compartilhavm/compartilhavm/subtratain4_com_flag.vhd" into library work
+Parsing VHDL file "/home/sd/bdantas/../Downloads/compartilhavm/compartilhavm/Modulo_Xor_com_flag.vhd" into library work
+Parsing VHDL file "/home/sd/bdantas/../Downloads/compartilhavm/compartilhavm/Modulo_Or_com_flag.vhd" into library work
+Parsing VHDL file "/home/sd/bdantas/../Downloads/compartilhavm/compartilhavm/Modulo_And_com_flag.vhd" into library work
+Parsing VHDL file "/home/sd/bdantas/../Downloads/compartilhavm/compartilhavm/Inversor_com_flag.vhd" into library work
+Parsing VHDL file "/home/sd/bdantas/../Downloads/compartilhavm/compartilhavm/incrementa1_com_flag.vhd" into library work
+Parsing VHDL file "/home/sd/bdantas/../Downloads/compartilhavm/compartilhavm/ULA_com_flag.vhd" into library work
+Parsing VHDL file "/home/sd/bdantas/../Downloads/compartilhavm/compartilhavm/contapain.vhd" into library work
+Parsing VHDL file "/home/sd/bdantas/danteste.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Fuse Memory Usage: 96376 KB
+Fuse CPU Usage: 1110 ms
+Compiling package standard
+Compiling package std_logic_1164
+Compiling package numeric_std
+Compiling architecture behavioral of entity Inversor [inversor_default]
+Compiling architecture behavioral of entity somapain [somapain_default]
+Compiling architecture behavioral of entity somapain4 [somapain4_default]
+Compiling architecture behavioral of entity Complementa [complementa_default]
+Compiling architecture behavioral of entity incrementa1 [incrementa1_default]
+Compiling architecture behavioral of entity subtratain4 [subtratain4_default]
+Compiling architecture behavioral of entity Modulo_And [modulo_and_default]
+Compiling architecture behavioral of entity Modulo_Xor [modulo_xor_default]
+Compiling architecture behavioral of entity Modulo_Or [modulo_or_default]
+Compiling architecture behavioral of entity ULA [ula_default]
+Compiling architecture behavioral of entity contapain [contapain_default]
+Compiling architecture behavior of entity danteste
+Time Resolution for simulation is 1ps.
+Waiting for 5 sub-compilation(s) to finish...
+Compiled 26 VHDL Units
+Built simulation executable /home/sd/bdantas/danteste_isim_beh.exe
+Fuse Memory Usage: 666160 KB
+Fuse CPU Usage: 1250 ms
+GCC CPU Usage: 770 ms

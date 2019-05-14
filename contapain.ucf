@@ -1,0 +1,16 @@
+
+# PlanAhead Generated physical constraints 
+
+NET "clk" LOC = E12;
+NET "alavanca2" LOC = U10;
+NET "alavanca1" LOC = V8;
+NET "alavanca3" LOC = U8;
+NET "alavanca4" LOC = T9;
+NET "Led1" LOC = R20;
+NET "Led2" LOC = T19;
+NET "Led3" LOC = U20;
+NET "Led4" LOC = U19;
+NET "op1" LOC = V19;
+NET "op2" LOC = V20;
+NET "op3" LOC = Y22;
+NET "op4" LOC = W21;

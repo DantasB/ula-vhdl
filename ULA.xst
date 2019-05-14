@@ -1,0 +1,5 @@
+set -tmpdir "/home/sd/bdantas/xst/projnav.tmp"
+set -xsthdpdir "/home/sd/bdantas/xst"
+elaborate
+-ifn ULA.prj
+-ifmt mixed

@@ -1,0 +1,4 @@
+vhdl work "../Downloads/compartilhavm/compartilhavm/somapain.vhd"
+vhdl work "../Downloads/compartilhavm/compartilhavm/somapain4_com_flag.vhd"
+vhdl work "../Downloads/compartilhavm/compartilhavm/Complementa_com_flag.vhd"
+vhdl work "../Downloads/compartilhavm/compartilhavm/subtratain4_com_flag.vhd"

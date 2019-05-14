@@ -73,16 +73,18 @@ SIGNAL resultado: std_logic_vector (3 downto 0);
 SIGNAL Flag_Zero_somador: std_logic;
 SIGNAL Flag_Sinal_somador: std_logic;
 SIGNAL Flag_Overflow_somador: std_logic;
+signal armazena_borrow : std_logic;
 signal borrow : std_logic;
 
 begin
 
 	a0:Complementa port map(y, ynvertido);
-	a1:somapain4 port map (bin, x, ynvertido, borrow, resultado, Flag_Zero_somador, Flag_Sinal_somador, Flag_Overflow_somador);
+	a1:somapain4 port map (bin, x, ynvertido, borrow, resultado, Flag_Zero_somador, Flag_Overflow_somador,  Flag_Sinal_somador);
 	saida <= resultado;
 	Flag_Zero <= not(resultado(0) or resultado(1) or resultado(2) or resultado(3));
 	Flag_Overflow <= Flag_Overflow_somador;
-	Flag_Borrow <= not borrow;
+	armazena_borrow <= not borrow;
+	bout<= armazena_borrow;
 	Flag_Sinal <= resultado(3);
-
+	Flag_Borrow <= armazena_borrow;
 end Behavioral;

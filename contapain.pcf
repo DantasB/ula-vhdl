@@ -1,0 +1,20 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Tue May 14 13:10:12 2019
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "alavanca2" LOCATE = SITE "U10" LEVEL 1;
+COMP "alavanca3" LOCATE = SITE "U8" LEVEL 1;
+COMP "Led4" LOCATE = SITE "U19" LEVEL 1;
+COMP "alavanca4" LOCATE = SITE "T9" LEVEL 1;
+COMP "clk" LOCATE = SITE "E12" LEVEL 1;
+COMP "op4" LOCATE = SITE "W21" LEVEL 1;
+COMP "op1" LOCATE = SITE "V19" LEVEL 1;
+COMP "op2" LOCATE = SITE "V20" LEVEL 1;
+COMP "Led1" LOCATE = SITE "R20" LEVEL 1;
+COMP "op3" LOCATE = SITE "Y22" LEVEL 1;
+COMP "Led2" LOCATE = SITE "T19" LEVEL 1;
+COMP "Led3" LOCATE = SITE "U20" LEVEL 1;
+COMP "alavanca1" LOCATE = SITE "V8" LEVEL 1;
+SCHEMATIC END;
+

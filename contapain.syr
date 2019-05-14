@@ -1,0 +1,600 @@
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.04 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.04 secs
+ 
+--> 
+Reading design: contapain.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "contapain.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "contapain"
+Output Format                      : NGC
+Target Device                      : xc3s700an-4-fgg484
+
+---- Source Options
+Top Module Name                    : contapain
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "/home/sd/Downloads/compartilhavm/compartilhavm/somapain.vhd" in Library work.
+Architecture behavioral of Entity somapain is up to date.
+Compiling vhdl file "/home/sd/Downloads/compartilhavm/compartilhavm/somapain4_com_flag.vhd" in Library work.
+Architecture behavioral of Entity somapain4 is up to date.
+Compiling vhdl file "/home/sd/Downloads/compartilhavm/compartilhavm/Complementa_com_flag.vhd" in Library work.
+Architecture behavioral of Entity complementa is up to date.
+Compiling vhdl file "/home/sd/Downloads/compartilhavm/compartilhavm/Inversor_com_flag.vhd" in Library work.
+Architecture behavioral of Entity inversor is up to date.
+Compiling vhdl file "/home/sd/Downloads/compartilhavm/compartilhavm/incrementa1_com_flag.vhd" in Library work.
+Architecture behavioral of Entity incrementa1 is up to date.
+Compiling vhdl file "/home/sd/Downloads/compartilhavm/compartilhavm/subtratain4_com_flag.vhd" in Library work.
+Architecture behavioral of Entity subtratain4 is up to date.
+Compiling vhdl file "/home/sd/Downloads/compartilhavm/compartilhavm/Modulo_And_com_flag.vhd" in Library work.
+Architecture behavioral of Entity modulo_and is up to date.
+Compiling vhdl file "/home/sd/Downloads/compartilhavm/compartilhavm/Modulo_Xor_com_flag.vhd" in Library work.
+Architecture behavioral of Entity modulo_xor is up to date.
+Compiling vhdl file "/home/sd/Downloads/compartilhavm/compartilhavm/Modulo_Or_com_flag.vhd" in Library work.
+Architecture behavioral of Entity modulo_or is up to date.
+Compiling vhdl file "/home/sd/Downloads/compartilhavm/compartilhavm/ULA_com_flag.vhd" in Library work.
+Architecture behavioral of Entity ula is up to date.
+Compiling vhdl file "/home/sd/Downloads/compartilhavm/compartilhavm/contapain.vhd" in Library work.
+Entity <contapain> compiled.
+Entity <contapain> (Architecture <behavioral>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <contapain> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <ULA> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <Inversor> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <Complementa> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <somapain4> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <incrementa1> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <subtratain4> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <Modulo_And> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <Modulo_Xor> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <Modulo_Or> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <somapain> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <somapain4> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <Complementa> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <somapain> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <somapain> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <somapain> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <somapain> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <somapain4> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <somapain> in library <work> (architecture <behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <contapain> in library <work> (Architecture <behavioral>).
+INFO:Xst:2679 - Register <op4> in unit <contapain> has a constant value of 0 during circuit operation. The register is replaced by logic.
+Entity <contapain> analyzed. Unit <contapain> generated.
+
+Analyzing Entity <ULA> in library <work> (Architecture <behavioral>).
+INFO:Xst:1561 - "/home/sd/Downloads/compartilhavm/compartilhavm/ULA_com_flag.vhd" line 233: Mux is complete : default of case is discarded
+WARNING:Xst:819 - "/home/sd/Downloads/compartilhavm/compartilhavm/ULA_com_flag.vhd" line 135: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <Flag_Zero_and>, <Flag_Sinal_and>, <Flag_Zero_xor>, <Flag_Sinal_xor>, <Flag_Zero_incrementa>, <Flag_Sinal_incrementa>, <Flag_Zero_subtrator>, <Flag_Sinal_subtrator>, <Flag_Overflow_subtrator>, <Flag_Borrow_subtrator>, <Flag_Zero_or>, <Flag_Sinal_or>, <Flag_Zero_somador>, <Flag_Sinal_somador>, <Flag_Overflow_somador>, <Flag_Cout_somador>, <Flag_Zero_complementador>, <Flag_Sinal_complementador>, <Flag_Zero_inversor>, <Flag_Sinal_inversor>
+Entity <ULA> analyzed. Unit <ULA> generated.
+
+Analyzing Entity <Inversor> in library <work> (Architecture <behavioral>).
+Entity <Inversor> analyzed. Unit <Inversor> generated.
+
+Analyzing Entity <Complementa> in library <work> (Architecture <behavioral>).
+WARNING:Xst:753 - "/home/sd/Downloads/compartilhavm/compartilhavm/Complementa_com_flag.vhd" line 70: Unconnected output port 'Flag_Cout' of component 'somapain4'.
+Entity <Complementa> analyzed. Unit <Complementa> generated.
+
+Analyzing Entity <somapain4> in library <work> (Architecture <behavioral>).
+Entity <somapain4> analyzed. Unit <somapain4> generated.
+
+Analyzing Entity <somapain> in library <work> (Architecture <behavioral>).
+Entity <somapain> analyzed. Unit <somapain> generated.
+
+Analyzing Entity <incrementa1> in library <work> (Architecture <behavioral>).
+WARNING:Xst:753 - "/home/sd/Downloads/compartilhavm/compartilhavm/incrementa1_com_flag.vhd" line 66: Unconnected output port 'Flag_Zero' of component 'somapain4'.
+WARNING:Xst:753 - "/home/sd/Downloads/compartilhavm/compartilhavm/incrementa1_com_flag.vhd" line 66: Unconnected output port 'Flag_Sinal' of component 'somapain4'.
+WARNING:Xst:753 - "/home/sd/Downloads/compartilhavm/compartilhavm/incrementa1_com_flag.vhd" line 66: Unconnected output port 'Flag_Overflow' of component 'somapain4'.
+WARNING:Xst:753 - "/home/sd/Downloads/compartilhavm/compartilhavm/incrementa1_com_flag.vhd" line 66: Unconnected output port 'Flag_Cout' of component 'somapain4'.
+Entity <incrementa1> analyzed. Unit <incrementa1> generated.
+
+Analyzing Entity <subtratain4> in library <work> (Architecture <behavioral>).
+WARNING:Xst:753 - "/home/sd/Downloads/compartilhavm/compartilhavm/subtratain4_com_flag.vhd" line 81: Unconnected output port 'Flag_Zero' of component 'Complementa'.
+WARNING:Xst:753 - "/home/sd/Downloads/compartilhavm/compartilhavm/subtratain4_com_flag.vhd" line 81: Unconnected output port 'Flag_Sinal' of component 'Complementa'.
+WARNING:Xst:753 - "/home/sd/Downloads/compartilhavm/compartilhavm/subtratain4_com_flag.vhd" line 82: Unconnected output port 'Flag_Cout' of component 'somapain4'.
+Entity <subtratain4> analyzed. Unit <subtratain4> generated.
+
+Analyzing Entity <Modulo_And> in library <work> (Architecture <behavioral>).
+Entity <Modulo_And> analyzed. Unit <Modulo_And> generated.
+
+Analyzing Entity <Modulo_Xor> in library <work> (Architecture <behavioral>).
+Entity <Modulo_Xor> analyzed. Unit <Modulo_Xor> generated.
+
+Analyzing Entity <Modulo_Or> in library <work> (Architecture <behavioral>).
+Entity <Modulo_Or> analyzed. Unit <Modulo_Or> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <Inversor>.
+    Related source file is "/home/sd/Downloads/compartilhavm/compartilhavm/Inversor_com_flag.vhd".
+Unit <Inversor> synthesized.
+
+
+Synthesizing Unit <Modulo_And>.
+    Related source file is "/home/sd/Downloads/compartilhavm/compartilhavm/Modulo_And_com_flag.vhd".
+Unit <Modulo_And> synthesized.
+
+
+Synthesizing Unit <Modulo_Xor>.
+    Related source file is "/home/sd/Downloads/compartilhavm/compartilhavm/Modulo_Xor_com_flag.vhd".
+    Found 4-bit xor2 for signal <valor>.
+Unit <Modulo_Xor> synthesized.
+
+
+Synthesizing Unit <Modulo_Or>.
+    Related source file is "/home/sd/Downloads/compartilhavm/compartilhavm/Modulo_Or_com_flag.vhd".
+Unit <Modulo_Or> synthesized.
+
+
+Synthesizing Unit <somapain>.
+    Related source file is "/home/sd/Downloads/compartilhavm/compartilhavm/somapain.vhd".
+    Found 1-bit xor2 for signal <cout>.
+    Found 1-bit xor3 for signal <saida>.
+    Summary:
+	inferred   1 Xor(s).
+Unit <somapain> synthesized.
+
+
+Synthesizing Unit <somapain4>.
+    Related source file is "/home/sd/Downloads/compartilhavm/compartilhavm/somapain4_com_flag.vhd".
+WARNING:Xst:1780 - Signal <prop<2>> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+    Found 1-bit xor2 for signal <Flag_Overflow>.
+Unit <somapain4> synthesized.
+
+
+Synthesizing Unit <Complementa>.
+    Related source file is "/home/sd/Downloads/compartilhavm/compartilhavm/Complementa_com_flag.vhd".
+WARNING:Xst:1780 - Signal <resultado> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <cout> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <Flag_Zero_somador> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <Flag_Sinal_somador> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <Flag_Overflow_somador> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+Unit <Complementa> synthesized.
+
+
+Synthesizing Unit <incrementa1>.
+    Related source file is "/home/sd/Downloads/compartilhavm/compartilhavm/incrementa1_com_flag.vhd".
+WARNING:Xst:1780 - Signal <resultado> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <cout> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <Flag_Zero_somador> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <Flag_Sinal_somador> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <Flag_Overflow_somador> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+Unit <incrementa1> synthesized.
+
+
+Synthesizing Unit <subtratain4>.
+    Related source file is "/home/sd/Downloads/compartilhavm/compartilhavm/subtratain4_com_flag.vhd".
+WARNING:Xst:646 - Signal <Flag_Zero_somador> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <Flag_Sinal_somador> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+Unit <subtratain4> synthesized.
+
+
+Synthesizing Unit <ULA>.
+    Related source file is "/home/sd/Downloads/compartilhavm/compartilhavm/ULA_com_flag.vhd".
+WARNING:Xst:646 - Signal <cout_somador> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <bout_subtrator> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 1-bit 16-to-1 multiplexer for signal <Flag_Zero>.
+    Found 1-bit 16-to-1 multiplexer for signal <Flag_Overflow>.
+    Found 4-bit 16-to-1 multiplexer for signal <Z>.
+    Found 1-bit 16-to-1 multiplexer for signal <Flag_Cout>.
+    Found 1-bit 16-to-1 multiplexer for signal <Flag_Sinal>.
+    Summary:
+	inferred   8 Multiplexer(s).
+Unit <ULA> synthesized.
+
+
+Synthesizing Unit <contapain>.
+    Related source file is "/home/sd/Downloads/compartilhavm/compartilhavm/contapain.vhd".
+WARNING:Xst:1780 - Signal <inutil> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <carrie> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+    Found 1-bit register for signal <Led1>.
+    Found 1-bit register for signal <Led2>.
+    Found 1-bit register for signal <Led3>.
+    Found 1-bit register for signal <Led4>.
+    Found 1-bit register for signal <op1>.
+    Found 1-bit register for signal <op2>.
+    Found 1-bit register for signal <op3>.
+    Found 28-bit comparator greatequal for signal <Led1$cmp_ge0000> created at line 92.
+    Found 4-bit up counter for signal <parte>.
+    Found 28-bit up counter for signal <redutor>.
+    Found 8-bit up counter for signal <vetorgrande>.
+    Found 28-bit comparator less for signal <vetorgrande$cmp_lt0000> created at line 92.
+    Summary:
+	inferred   3 Counter(s).
+	inferred   7 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+Unit <contapain> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Counters                                             : 3
+ 28-bit up counter                                     : 1
+ 4-bit up counter                                      : 1
+ 8-bit up counter                                      : 1
+# Registers                                            : 7
+ 1-bit register                                        : 7
+# Comparators                                          : 2
+ 28-bit comparator greatequal                          : 1
+ 28-bit comparator less                                : 1
+# Multiplexers                                         : 5
+ 1-bit 16-to-1 multiplexer                             : 4
+ 4-bit 16-to-1 multiplexer                             : 1
+# Xors                                                 : 49
+ 1-bit xor2                                            : 29
+ 1-bit xor3                                            : 20
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Counters                                             : 3
+ 28-bit up counter                                     : 1
+ 4-bit up counter                                      : 1
+ 8-bit up counter                                      : 1
+# Registers                                            : 7
+ Flip-Flops                                            : 7
+# Comparators                                          : 2
+ 28-bit comparator greatequal                          : 1
+ 28-bit comparator less                                : 1
+# Multiplexers                                         : 5
+ 1-bit 16-to-1 multiplexer                             : 4
+ 4-bit 16-to-1 multiplexer                             : 1
+# Xors                                                 : 49
+ 1-bit xor2                                            : 29
+ 1-bit xor3                                            : 20
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <contapain> ...
+
+Optimizing unit <ULA> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block contapain, actual ratio is 1.
+FlipFlop vetorgrande_2 has been replicated 1 time(s)
+FlipFlop vetorgrande_6 has been replicated 1 time(s)
+FlipFlop vetorgrande_7 has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 50
+ Flip-Flops                                            : 50
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : contapain.ngr
+Top Level Output File Name         : contapain
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 13
+
+Cell Usage :
+# BELS                             : 266
+#      GND                         : 1
+#      INV                         : 6
+#      LUT1                        : 38
+#      LUT2                        : 12
+#      LUT2_D                      : 3
+#      LUT3                        : 26
+#      LUT3_D                      : 2
+#      LUT3_L                      : 2
+#      LUT4                        : 64
+#      LUT4_D                      : 4
+#      LUT4_L                      : 6
+#      MUXCY                       : 44
+#      MUXF5                       : 18
+#      MUXF6                       : 3
+#      VCC                         : 1
+#      XORCY                       : 36
+# FlipFlops/Latches                : 50
+#      FDE                         : 18
+#      FDR                         : 28
+#      FDRE                        : 4
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 12
+#      IBUF                        : 4
+#      OBUF                        : 8
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s700anfgg484-4 
+
+ Number of Slices:                       85  out of   5888     1%  
+ Number of Slice Flip Flops:             50  out of  11776     0%  
+ Number of 4 input LUTs:                163  out of  11776     1%  
+ Number of IOs:                          13
+ Number of bonded IOBs:                  13  out of    372     3%  
+ Number of GCLKs:                         1  out of     24     4%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 50    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 8.255ns (Maximum Frequency: 121.139MHz)
+   Minimum input arrival time before clock: 8.403ns
+   Maximum output required time after clock: 5.642ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 8.255ns (frequency: 121.139MHz)
+  Total number of paths / destination ports: 1946 / 104
+-------------------------------------------------------------------------
+Delay:               8.255ns (Levels of Logic = 7)
+  Source:            vetorgrande_0 (FF)
+  Destination:       Led1 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: vetorgrande_0 to Led1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q             25   0.591   1.263  vetorgrande_0 (vetorgrande_0)
+     LUT4_L:I3->LO         1   0.648   0.103  ulala/U4/a1/a1/Mxor_cout_Result1 (ulala/U4/a1/prop<1>)
+     LUT4:I3->O            2   0.648   0.447  ulala/U4/a1/a2/Mxor_saida_xo<0>11 (ulala/N7)
+     MUXF5:S->O            1   0.756   0.452  ulala/Flag_Zero_subtrator1_SW1 (N27)
+     LUT4:I2->O            1   0.648   0.452  ulala/Operacao<1>_3 (ulala/Operacao<1>_3)
+     LUT3:I2->O            1   0.648   0.000  Led1_mux0000185_F (N72)
+     MUXF5:I0->O           1   0.276   0.423  Led1_mux0000185 (Led1_mux0000185)
+     LUT4:I3->O            1   0.648   0.000  Led1_mux0000286 (Led1_mux0000)
+     FDE:D                     0.252          Led1
+    ----------------------------------------
+    Total                      8.255ns (5.115ns logic, 3.140ns route)
+                                       (62.0% logic, 38.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 87 / 4
+-------------------------------------------------------------------------
+Offset:              8.403ns (Levels of Logic = 8)
+  Source:            alavanca2 (PAD)
+  Destination:       Led2 (FF)
+  Destination Clock: clk rising
+
+  Data Path: alavanca2 to Led2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            21   0.849   1.271  alavanca2_IBUF (alavanca2_IBUF)
+     LUT4:I0->O            1   0.648   0.500  ulala/U2/a2/Mxor_cout_Result1_SW1 (N35)
+     LUT4:I1->O            1   0.643   0.423  Led2_mux0000100 (Led2_mux0000100)
+     LUT4_L:I3->LO         1   0.648   0.103  Led2_mux000087_SW0 (N52)
+     LUT4:I3->O            1   0.648   0.423  Led2_mux0000116 (Led2_mux0000116)
+     LUT4:I3->O            1   0.648   0.000  Led2_mux0000161_G (N75)
+     MUXF5:I1->O           1   0.276   0.423  Led2_mux0000161 (Led2_mux0000161)
+     LUT4:I3->O            1   0.648   0.000  Led2_mux0000261 (Led2_mux0000)
+     FDE:D                     0.252          Led2
+    ----------------------------------------
+    Total                      8.403ns (5.260ns logic, 3.143ns route)
+                                       (62.6% logic, 37.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 7 / 7
+-------------------------------------------------------------------------
+Offset:              5.642ns (Levels of Logic = 1)
+  Source:            op3 (FF)
+  Destination:       op3 (PAD)
+  Source Clock:      clk rising
+
+  Data Path: op3 to op3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              3   0.591   0.531  op3 (op3_OBUF)
+     OBUF:I->O                 4.520          op3_OBUF (op3)
+    ----------------------------------------
+    Total                      5.642ns (5.111ns logic, 0.531ns route)
+                                       (90.6% logic, 9.4% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 6.00 secs
+Total CPU time to Xst completion: 5.80 secs
+ 
+--> 
+
+
+Total memory usage is 613892 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   26 (   0 filtered)
+Number of infos    :    2 (   0 filtered)
+

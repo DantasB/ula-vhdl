@@ -37,7 +37,8 @@ entity somapain4 is
            saida : out  STD_LOGIC_VECTOR (3 downto 0);
            Flag_Zero : out STD_LOGIC;
            Flag_Sinal : out STD_LOGIC;
-           Flag_Overflow : out STD_LOGIC);
+           Flag_Overflow : out STD_LOGIC;
+			  Flag_Cout : out STD_LOGIC);
 end somapain4;
 
 
@@ -66,6 +67,8 @@ a3: somapain port map (c2, x(3), y(3), c3, valor(3));
 Flag_Zero <= not(valor(0) or valor(1) or valor(2) or valor(3));
 Flag_Sinal <= valor(3);
 Flag_Overflow <= c3 xor c2;
+Flag_Cout <= c3;
+cout <= c3;
 saida <= valor;
 end Behavioral;
 
