@@ -1,5 +1,0 @@
-set -tmpdir "/home/sd/bdantas/xst/projnav.tmp"
-set -xsthdpdir "/home/sd/bdantas/xst"
-elaborate
--ifn subtratain4.prj
--ifmt mixed
