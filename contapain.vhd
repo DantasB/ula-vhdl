@@ -30,18 +30,9 @@ use IEEE.NUMERIC_STD.ALL;
 --use UNISIM.VComponents.all;
 
 entity contapain is
-    Port ( alavanca1 : in  STD_LOGIC;
-           alavanca2 : in  STD_LOGIC;
-           alavanca3 : in  STD_LOGIC;
-           alavanca4 : in  STD_LOGIC;
-           Led1 : out  STD_LOGIC;
-           Led2 : out  STD_LOGIC;
-           Led3 : out  STD_LOGIC;
-           Led4 : out  STD_LOGIC;
-			  op1 : out  STD_LOGIC;
-           op2 : out  STD_LOGIC;
-           op3 : out  STD_LOGIC;
-           op4 : out  STD_LOGIC;
+    Port ( alavancas : in  STD_LOGIC_VECTOR (3 downto 0);
+           leds : out  STD_LOGIC_VECTOR (3 downto 0);
+			  step : out  STD_LOGIC_VECTOR (3 downto 0);--step 1 esta sendo mostrado vetor 1,2: vetor 2, 3: resultado, 4:flags
 			  clk: in std_logic
 			  );
 end contapain;
@@ -59,76 +50,48 @@ component ULA
 	   );
 end component ULA;
 
-signal inutil : STD_LOGIC_VECTOR (7 downto 0):= "00000000";
-signal vetor1 : STD_LOGIC_VECTOR (3 downto 0):= "0000";
-signal vetor2 : STD_LOGIC_VECTOR (3 downto 0):= "0000";
-signal vetorgrande : UNSIGNED(7 downto 0):= "00000000";
-signal result : STD_LOGIC_VECTOR (3 downto 0):= "0000";
-signal fzero : STD_LOGIC := '0';
+signal vetor1 : STD_LOGIC_VECTOR (3 downto 0):= "0000";-- primeiro vetor de 4 bits que entra na ula
+signal vetor2 : STD_LOGIC_VECTOR (3 downto 0):= "0000";-- segundo vetor de 4 bits que entra na ula
+signal vetorcontador : UNSIGNED(7 downto 0):= "00000000";-- 4 primeiros bits serao o vetor 1 4 ultimos vetor 2, soma 1 a cada clock reduzido
+signal result : STD_LOGIC_VECTOR (3 downto 0):= "0000";-- resultado da ula
+signal fzero : STD_LOGIC := '0';-- flags
 signal fsinal : STD_LOGIC:= '0';
 signal fover : STD_LOGIC:= '0';
 signal fcout : STD_LOGIC:= '0';
-signal oparcione: STD_LOGIC_VECTOR (3 downto 0):= "0000";
-signal carrie : STD_LOGIC:= '0';
 begin
-vetor1(0)<= vetorgrande(0);
-vetor1(1)<= vetorgrande(1);
-vetor1(2)<= vetorgrande(2);
-vetor1(3)<= vetorgrande(3);
-vetor2(0)<= vetorgrande(4);
-vetor2(1)<= vetorgrande(5);
-vetor2(2)<= vetorgrande(6);
-vetor2(3)<= vetorgrande(7);
-oparcione(0) <= alavanca1;
-oparcione(1) <= alavanca2; 
-oparcione(2) <= alavanca3;
-oparcione(3) <= alavanca4;
-ulala: ULA port map (vetor1, vetor2, oparcione, result, fzero, fsinal, fover, fcout);
+vetor1(0)<= vetorcontador(0);
+vetor1(1)<= vetorcontador(1);
+vetor1(2)<= vetorcontador(2);
+vetor1(3)<= vetorcontador(3);
+vetor2(0)<= vetorcontador(4);
+vetor2(1)<= vetorcontador(5);
+vetor2(2)<= vetorcontador(6);
+vetor2(3)<= vetorcontador(7);
+ulala: ULA port map (vetor1, vetor2, alavancas, result, fzero, fsinal, fover, fcout);
 	process(clk)
 		variable parte : INTEGER RANGE 15 DOWNTO 0:=0;
 		variable redutor : INTEGER RANGE 200_000_000 DOWNTO 0:=0;
 		begin
 			if (clk'event and clk = '1') then 
-			if (redutor >= 10) then
+			if (redutor >= 200_000_000) then -- o clock de verdade so ocorre quando o redutor chego no valor limite
 				redutor := 0;
 				if (parte = 0) then
-					Led1 <= vetor1(0);
-					Led2 <= vetor1(1);
-					Led3 <= vetor1(2);
-					Led4 <= vetor1(3);
-					op1 <= '1';
-					op2 <= '0';
-					op3 <= '0';
-					op4 <= '0';
+					leds <= vetor1;
+					step <= "0001";
 				elsif (parte = 1) then
-					Led1 <= vetor2(0);
-					Led2 <= vetor2(1);
-					Led3 <= vetor2(2);
-					Led4 <= vetor2(3);
-					op1 <= '0';
-					op2 <= '1';
-					op3 <= '0';
-					op4 <= '0';
+					leds <= vetor2;
+					step <= "0010";
 				elsif (parte = 2) then
-					Led1 <= result(0);
-					Led2 <= result(1);
-					Led3 <= result(2);
-					Led4 <= result(3);
-					op1 <= '1';
-					op2 <= '1';
-					op3 <= '0';
-					op4 <= '0';
+					leds <= result;
+					step <= "0011";
 				elsif (parte = 3) then
-					Led1 <= fzero;
-					Led2 <= fsinal;
-					Led3 <= fover;
-					Led4 <= fcout;
-					op1 <= '0';
-					op2 <= '0';
-					op3 <= '1';
-					op4 <= '0';
+					Leds(0) <= fzero;
+					Leds(1) <= fsinal;
+					Leds(2) <= fover;
+					Leds(3) <= fcout;
+					step <= "0100";
 				else
-					vetorgrande<= vetorgrande + 1;
+					vetorcontador<= vetorcontador + 1;
 				end if;
 				if (parte = 4) then
 					parte := 0;

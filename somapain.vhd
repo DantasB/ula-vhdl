@@ -45,7 +45,7 @@ begin
 	k2 <= x and cin;
 	k3 <= y and cin;
 	k4 <= k1 or k2;
-	cout <= k3 xor k4; 
+	cout <= k3 or k4; 
 	kfinal <= x XOR y;
 	saida <= kfinal xor cin;
 end Behavioral;
